@@ -9,19 +9,20 @@ import UncontrolledOnOff from "./components/UncontrolledOff/UncontrolledOnOff";
 
 function App() {
 
-    const [ratingValue, setRatingValue] = useState<RatingValueType>(2)
+    const [ratingValue, setRatingValue] = useState<RatingValueType>(0)
     const [collapsed, setCollapsed] = useState<boolean>(false)
     const [on, setOn] = useState<boolean>(false)
 
 
     return (
         <div className={"App"}>
-            <OnOff on={on} setOn={setOn}/>
-            <UncontrolledOnOff/>
+            {/*<OnOff on={on} setOn={setOn}/>*/}
+            <UncontrolledOnOff onChange={setOn}/> {on.toString()}
 
-            {/*<UncontrolledAccordion  titleValue={"Menu"}/>*/}
+            <UncontrolledAccordion  titleValue={"Menu"}/>
+            <UncontrolledAccordion  titleValue={"Blalal"}/>
             <Accordion
-                titleValue={"test"}
+                titleValue={"Users"}
                 collapsed={collapsed}
                 onClick={setCollapsed}
             />
@@ -54,9 +55,6 @@ type PageTitlePropsType = {
 function PageTitle(props: PageTitlePropsType) {
     return <h1>{props.title}</h1>
 }
-
-
-
 
 
 export default App;
