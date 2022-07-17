@@ -8,14 +8,14 @@ import {UncontrolledRating} from "./components/UncontrolledRating/Rating";
 
 function App() {
     return (
-        <div>
+        <div className={"App"}>
             <OnOff/>
-            <OnOff/>
-            <OnOff/>
+
             <UncontrolledAccordion  titleValue={"Menu"}/>
-            <UncontrolledAccordion  titleValue={"Users"}/>
+            <Accordion titleValue={"Users"} collapsed={false}/>
 
             <UncontrolledRating/>
+            <Rating value={4}/>
 
             {/*<PageTitle title={"APP component"}/>*/}
             {/*<PageTitle title={"My friends"}/>*/}
