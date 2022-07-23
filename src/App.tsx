@@ -27,7 +27,7 @@ function App() {
                 onClick={setCollapsed}
             />
 
-            <UncontrolledRating/>
+            {/*<UncontrolledRating/>*/}
             <Rating value={ratingValue} onClick={setRatingValue}/>
 
             {/*<PageTitle title={"APP component"}/>*/}
