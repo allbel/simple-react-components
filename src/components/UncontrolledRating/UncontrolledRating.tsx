@@ -7,7 +7,7 @@ type UncontrolledRating = {
     onChange: (value: RatingValueType) => void
 }
 
-export function UncontrolledRating(props: UncontrolledRating) {
+function UncontrolledRatingSecret(props: UncontrolledRating) {
 
     const [value, setValue] = useState<RatingValueType>(props.defaultValue ? props.defaultValue : 0)
 
@@ -21,6 +21,8 @@ export function UncontrolledRating(props: UncontrolledRating) {
         </div>
     )
 }
+
+export const UncontrolledRating = React.memo(UncontrolledRatingSecret)
 
 type StarPropsType = {
     selected: boolean
