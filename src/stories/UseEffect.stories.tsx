@@ -11,12 +11,16 @@ export const SimpleExample = () => {
     console.log('SimpleExample')
 
     useEffect(() => {
-        console.log('useEffect')
-        document.title = counter.toString()
-    })
+        setTimeout(() => {
+            console.log('setTimeout')
+            document.title = counter.toString()
+        }, 1000)
+    }, [])
+
 
     return <>
         Hello, {counter} {fake}
         <button onClick={() => setFake(fake + 1)}>+</button>
+        <button onClick={() => setCounter(counter + 1)}>+</button>
     </>
 }
